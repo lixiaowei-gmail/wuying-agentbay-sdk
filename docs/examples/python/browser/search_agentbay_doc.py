@@ -84,8 +84,8 @@ async def main():
                     await agentbay_link.click()
                     new_page = await new_page_info.value
                     await new_page.wait_for_load_state("domcontentloaded")
-                    await new_page.wait_for_selector("a[href*='agentbay-document-index']")
-                    helper_link = new_page.locator("a[href*='agentbay-document-index']").first
+                    await new_page.wait_for_selector("a[href*='document_detail']")
+                    helper_link = new_page.locator("a[href*='document_detail']").first
                     print("helper_link =", await helper_link.text_content())
                     await helper_link.click()
 
